@@ -9,7 +9,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 
 @Configuration
 @EnableWebMvc
-@ComponentScan(basePackages = "com.epam.project.controller")
+@ComponentScan(basePackages = "com.epam.project")
 @Import(ServiceConfiguration.class)
 public class WebMvcConfig extends WebMvcConfigurerAdapter {
 
@@ -18,4 +18,5 @@ public class WebMvcConfig extends WebMvcConfigurerAdapter {
         registry.addResourceHandler("/index.html").addResourceLocations("/index.html");
         registry.addResourceHandler("/resources/**").addResourceLocations("/resources/");
     }
+
 }

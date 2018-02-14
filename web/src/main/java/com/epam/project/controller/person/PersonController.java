@@ -1,4 +1,4 @@
-package com.epam.project.controller;
+package com.epam.project.controller.person;
 
 import com.epam.project.PersonModel;
 import com.epam.project.controller.converter.ConvertPerson;

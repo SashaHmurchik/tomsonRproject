@@ -12,6 +12,7 @@
         <module>service</module>
         <module>model</module>
         <module>web</module>
+        <module>file-system</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -25,10 +26,29 @@
         <lombok.version>1.16.18</lombok.version>
         <java.version>1.8</java.version>
         <log4j.version>2.5</log4j.version>
+        <springsecurity.version>4.2.4.RELEASE</springsecurity.version>
     </properties>
 
     <dependencies>
+        <!-- https://mvnrepository.com/artifact/org.springframework.security/spring-security-web -->
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-web</artifactId>
+            <version>${springsecurity.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-config</artifactId>
+            <version>${springsecurity.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-taglibs</artifactId>
+            <version>${springsecurity.version}</version>
+        </dependency>
+
         <!-- Spring -->
+
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-core</artifactId>

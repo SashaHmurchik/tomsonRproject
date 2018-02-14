@@ -10,7 +10,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @Configuration
 @EnableTransactionManagement
-@ComponentScan(basePackages = "com.epam.project.service")
+@ComponentScan(basePackages = "com.epam.project")
 @Import({HibernateConfiguration.class})
 public class ServiceConfiguration {
 

@@ -20,8 +20,9 @@ public class PersonServiceImpl implements PersonService {
         return null;
     }
 
-    @Transactional(readOnly = true)
+
     @Override
+    @Transactional(readOnly = true)
     public List<Person> findAll() {
         return personDao.findAll();
     }
@@ -32,7 +33,8 @@ public class PersonServiceImpl implements PersonService {
     }
 
     @Override
+    @Transactional(readOnly = true)
     public Person findByMail(String eMail) {
-        return null;
+        return personDao.findByMail(eMail);
     }
 }

@@ -10,7 +10,7 @@ public class ConvertPerson {
         PersonModel personModel = new PersonModel();
         personModel.setId(person.getId());
         personModel.setEMail(person.getEMail());
-        personModel.setUserRole(convertToRoleModel(person.getUserRole()));
+        personModel.setUserRole(convertToRoleModel(person.getRole()));
         return personModel;
     }
 
@@ -18,7 +18,7 @@ public class ConvertPerson {
         Person person = new Person();
         person.setId(personModel.getId());
         person.setEMail(personModel.getEMail());
-        person.setUserRole(convertToRole(personModel.getUserRole()));
+        person.setRole(convertToRole(personModel.getUserRole()));
         return person;
 
     }

@@ -9,8 +9,8 @@ import java.util.Set;
 
 @Getter
 @Setter
-@ToString
-@EqualsAndHashCode
+@ToString(exclude = {"persons"})
+@EqualsAndHashCode(exclude = {"persons"})
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
@@ -29,7 +29,7 @@ public class Role {
             length = 36)
     private String roleName;
 
-    @OneToMany(mappedBy = "userRole",
+    @OneToMany(mappedBy = "role",
             cascade = CascadeType.ALL,
             fetch = FetchType.LAZY)
     @Fetch(value = FetchMode.JOIN)

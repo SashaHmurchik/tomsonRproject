@@ -26,15 +26,16 @@ public class Person implements Serializable {
     @Column(name = "user_eMail",
             unique = true,
             nullable = false,
-            length = 36)
+            length = 50)
     private String eMail;
 
     @Column(name = "user_password",
             nullable = false,
-            length = 36)
+            length = 70)
     private String password;
 
     @ManyToOne
-    @JoinColumn(name = "role_id", nullable = false)
-    private Role userRole;
+    @JoinColumn(name = "role_id",
+            nullable = false)
+    private Role role;
 }
