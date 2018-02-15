@@ -5,7 +5,10 @@ import com.epam.project.RoleModel;
 import com.epam.project.entity.Person;
 import com.epam.project.entity.Role;
 
-public class ConvertPerson {
+/**
+ * Created by Aliaksandr_Khmurchyk on 15-Feb-18.
+ */
+public class PersonConverter {
     public static PersonModel convertToPersonModel(Person person) {
         PersonModel personModel = new PersonModel();
         personModel.setId(person.getId());

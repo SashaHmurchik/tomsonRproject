@@ -1,7 +1,7 @@
 package com.epam.project.controller.person;
 
 import com.epam.project.PersonModel;
-import com.epam.project.controller.converter.ConvertPerson;
+import com.epam.project.controller.converter.PersonConverter;
 import com.epam.project.entity.Person;
 import com.epam.project.service.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,7 +29,7 @@ public class PersonController {
     @GetMapping
     public List<PersonModel> findAll() {
         List<Person> persons = personService.findAll();
-        return persons.stream().map(ConvertPerson::convertToPersonModel)
+        return persons.stream().map(PersonConverter::convertToPersonModel)
                 .collect(Collectors.toList());
     }
 }
